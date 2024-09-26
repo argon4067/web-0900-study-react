@@ -3,7 +3,13 @@ import React from 'react';
 import GlobalStyle from './global/global';
 import { ThemeProvider } from 'styled-components';
 import theme from './global/theme';
-import HomeIcon from './pages/home/HomeIcon';
+// import ParentContainer from './docs/day04/context/nomal/ParentContainer';
+import AnimalsContainer from './docs/day04/context/expert/AnimalsContainer';
+// import D from './docs/day04/context/basic/D';
+// import CharContainer from './docs/day04/context/basic/CharContainer';
+// import ParentContainer from './docs/day04/context/basic/ParentContainer';
+// import HomeIcon from './pages/home/HomeIcon';
+// import PowButton from './pages/home/PowButton';
 // import Home from './pages/home/Home';
 // 모든 태그는 함수로 선언
 // DOM은 하나로 선언
@@ -17,7 +23,10 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <HomeIcon />
+        {/* <ParentContainer /> */}
+        {/* <CharContainer /> */}
+        {/* <ParentContainer /> */}
+        <AnimalsContainer />
       </ThemeProvider>
     </>
   );

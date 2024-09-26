@@ -25,9 +25,14 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  body {
+    line-height: 1.3;
+  }
+
 
   button {
     cursor: pointer;
+    border: none;
   }
 
 
