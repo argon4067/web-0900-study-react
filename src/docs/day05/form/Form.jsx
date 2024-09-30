@@ -33,21 +33,58 @@ const Form = () => {
 
       // CRUD(Create), post 요청
       // fetch("경로", {옵션})
-      await fetch("http://localhost:4000/user" , {
-        method : 'POST',
-        headers : {
-          'Content-Type' : "applcation/json"
-        },
-        body : JSON.stringify({
-          id : 2,
-          email : data.email,
-          password : data.password
-        })
-      })
-      .then((response) => response.json())
-      .then(console.log)
-      .catch(console.error)
+      // await fetch("http://localhost:4000/user" , {
+      //   method : 'POST',
+      //   credentials : 'include',
+      //   // 요청에 대한 정보
+      //   headers : {
+      //     'Content-Type' : "applcation/json"
+      //   },
+      //   body : JSON.stringify({
+      //     id : 2,
+      //     email : data.email,
+      //     password : data.password
+      //   })
+      // })
+      // .then((response) => response.json())
+      // .then(console.log)
+      // .catch(console.error)
 
+      // DELETE 
+      // let id =2;
+      // if(window.confirm('정말 회원탈퇴 하시겠습니까?')){
+      // await fetch (`http://localhost:4000/user/${id}` , {
+      //   method : 'DELETE',
+      //   headers : {
+      //         'Content-Type' : "applcation/json"
+      //       },
+      //       body : JSON.stringify({
+      //         ...data
+      //       })
+      //     }).then((response) => {
+      //       if(!response.ok){ return console.log(`Error ${response}`)}
+      //       console.log("회원탈퇴가 완료되었습니다")
+      //     })
+      //   }
+
+        // UPDATE
+      let id =1;
+      if(window.confirm('정말 업데이트 하시겠습니까?')){
+      await fetch (`http://localhost:4000/user/${id}` , {
+        method : 'PUT',
+        headers : {
+              'Content-Type' : "applcation/json"
+            },
+            body : JSON.stringify({
+              ...data
+            })
+          }).then((response) => {
+            if(!response.ok){ return console.log(`Error ${response}`)}
+            console.log("업데이트가 완료되었습니다")
+          })
+        }
+
+      
 
 
 
